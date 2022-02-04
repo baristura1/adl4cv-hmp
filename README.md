@@ -11,9 +11,10 @@
 <div align="justify">
 The task of human motion prediction is concerned with forecasting a sequence of motion in the future given the past motion sequences. The difficulty of addressing this issue lies in the fact that it is difficult to embed both spatial and temporal interdependencies of the joints and carry over the information from the history while still leaving room for unseen motion modalities. Some models may be prone to overfitting and oversmoothing. We propose a novel graph neural network architecture that includes a graph scattering network with spectral attention applied to a spatiotemporal graph that encodes human motion. We demonstrate that both the wavelets and the spectral attention help significantly reduce the mean per joint position error. We propose the use of wavelet filters with an undirected learnable adjacency matrix. We show that our model outperforms the state-of-the-art model for deterministic human motion prediction using certain configurations of the graph adjacency matrix in long-term predictions on the Human3.6M dataset.
 </div>
+--------
 
-<div align="left"> <h3> Models </h3>  </div>
-<div align="justify">
+### Models
+
 model.py -- Sandwich Architecture  
 model2.py -- Space-Time Seperable Adjacency  
 model3.py -- Space-Time Seperable Scattering, Shared Adjacencies  
@@ -26,9 +27,6 @@ model_scatter_2.py -- Scattering, Non-Normalized Adjacencies
 model_scatter_3.py -- Scattering, Undirected Adjacencies in Wavelets  
 model_scatter_4.py -- Scattering, Undirected Adjacency Matrix  
 model_scatter_5.py -- Scattering, Undirected Adjacencies in Wavelet, Diff Attention Mech.  
-
-</div>
---------
 
 
  ### Install dependencies:
@@ -76,8 +74,3 @@ The arguments for running the code are defined in [parser.py](utils/parser.py). 
  
  Some of our code was adapted from [HisRepsItself](https://github.com/wei-mao-2019/HisRepItself) by [Wei Mao](https://github.com/wei-mao-2019) and from [STSGCN](https://github.com/FraLuca/STSGCN) by [Luca Franco](https://github.com/FraLuca).
 
-
- 
- ### License 
- 
- MIT license
