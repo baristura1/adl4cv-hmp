@@ -14,9 +14,19 @@ The task of human motion prediction is concerned with forecasting a sequence of 
 
 <div align="left"> <h3> Models </h3>  </div>
 <div align="justify">
-asd:asd
-asdasd:asdasd
-asdasdasdasd:asdasdasasd
+model.py -- Sandwich Architecture  
+model2.py -- Space-Time Seperable Adjacency  
+model3.py -- Space-Time Seperable Scattering, Shared Adjacencies  
+model4.py -- Space-Time Seperable Scattering  
+model5.py -- Full Adjacency  
+model6.py -- Full Adjacency + Weight  
+model_7_gcnii.py -- GCNII  
+model_scatter.py -- Scattering, Normalized Ajacencies  
+model_scatter_2.py -- Scattering, Non-Normalized Adjacencies  
+model_scatter_3.py -- Scattering, Undirected Adjacencies in Wavelets  
+model_scatter_4.py -- Scattering, Undirected Adjacency Matrix  
+model_scatter_5.py -- Scattering, Undirected Adjacencies in Wavelet, Diff Attention Mech.  
+
 </div>
 --------
 
@@ -46,25 +56,25 @@ Extract the downloaded dataset in ./datasets directory.
 The arguments for running the code are defined in [parser.py](utils/parser.py). We have used the following commands for training the network,on different datasets and body pose representations(3D and euler angles):
  
 ```bash
- python main_h36_3d.py --input_n 10 --output_n 25 --skip_rate 1 --joints_to_consider 22 
+ python main_h36_3d_3.py --input_n 10 --output_n 25 --skip_rate 1 --joints_to_consider 22 
  ```
 
  ### Test
  To test on the pretrained model, we have used the following commands:
  ```bash
- python main_h36_3d.py --input_n 10 --output_n 25 --skip_rate 1 --joints_to_consider 22 --mode test --model_path ./checkpoints/CKPT_3D_H36M
+ python main_h36_3d_3.py --input_n 10 --output_n 25 --skip_rate 1 --joints_to_consider 22 --mode test --model_path ./checkpoints/CKPT_3D_H36M
   ```
 
 ### Visualization
  For visualizing from a pretrained model, we have used the following commands:
  ```bash
-  python main_h36_3d.py --input_n 10 --output_n 25 --skip_rate 1 --joints_to_consider 22 --mode viz --model_path ./checkpoints/CKPT_3D_H36M --n_viz 5
+  python main_h36_3d_3.py --input_n 10 --output_n 25 --skip_rate 1 --joints_to_consider 22 --mode viz --model_path ./checkpoints/CKPT_3D_H36M --n_viz 5
  ```
 
  
  ### Acknowledgments
  
- Some of our code was adapted from [HisRepsItself](https://github.com/wei-mao-2019/HisRepItself) by [Wei Mao](https://github.com/wei-mao-2019).
+ Some of our code was adapted from [HisRepsItself](https://github.com/wei-mao-2019/HisRepItself) by [Wei Mao](https://github.com/wei-mao-2019) and from [STSGCN](https://github.com/FraLuca/STSGCN) by [Luca Franco](https://github.com/FraLuca).
 
 
  
